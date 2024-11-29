@@ -1,0 +1,214 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+
+main {
+  background: url(../img/messi.jpg);
+  background-size: cover;
+}
+
+.banner {
+    font-family: "Michroma", sans-serif;
+    background: url(../img/ucll.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 70px;
+    color: white;
+    transition: all 500ms;
+}
+
+.banner:hover {
+    transition: all 500ms ease;
+    padding: 70px;
+    background-position: center bottom;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border-bottom:  2px groove #fff;
+    background-image: linear-gradient(90deg,#000222,#1f2544 50%, #000222)
+}
+.navigation img {
+    height: 30px;
+}
+.navigation ul {
+    display: flex;
+    gap: 2rem;
+    padding-inline: 1.5rem;
+}
+.navigation li {
+    list-style-type: none;
+}
+.navigation a:hover {
+    padding: 15px;
+    transition: 600ms ease;
+}
+.navigation a {
+    transition: 600ms ease;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+}
+
+.box-image {
+  border-radius: 20px;
+    width: 50%;
+    max-height: 100vh;
+    object-fit: contain cover;
+    object-position: center;
+  }
+
+  .gallery .box-image {
+    border-radius: 20px;
+    width: 100%;
+    max-height: 20vh;
+    object-fit: contain cover;
+    object-position: center;
+  }
+
+  main {
+    padding: 20px;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .card {
+    border-radius: 20px;
+    padding: 20px;
+    background: #1f2544;
+    border: 3px groove #fff;
+    background-image: url('/assets/img/test.png');
+  }
+
+  aside .card {
+    border-radius: 20px;
+    padding: 20px;
+    background: #1f2544;
+    border: 3px groove #fff;
+  }
+
+  #container {
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+    
+  }
+
+  .profile img {
+    width: 200px;
+    border-radius: 10px;
+  }
+
+  .profile th {
+    text-align: start;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  footer {
+    padding: 20px;
+    color: white;
+    background-color: #1f2544;
+    border-top:  4px groove #fff;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .gallery {
+    display: flex;
+    overflow-x: scroll;
+    gap: 2%;
+  }
+
+  .gallery div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 2%;
+    flex: none;
+  }
+
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+  main aside {
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .banner h1 {
+    font-size: 10vh;
+  }
+
+  .banner p {
+    font-size: 3vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .navigation {
+    font-size: 1.5vh;
+  }
+
+  .box-image {
+    width: 100%;
+  }
+
+  #container p {
+    font-size: 2vmax
+  }
+
+  .gallery .box-image {
+    border-radius: 20px;
+    width: 100%;
+    max-height: 80%;
+    object-fit: contain cover;
+    object-position: center;
+  }
+
+}
+
+.gallery::-webkit-scrollbar{
+  display: none;
+}
+
+.gallery-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  gap: 2%;
+}
+
+#backBtn, #nextBtn {
+  width: 5%;
+  background-color: #fff;
+  border-radius: 20%;
+  cursor: pointer;
+}
+
+#container h2{
+  font-style: italic;
+  font-size: 7.5vh;
+}
+
+#container h3{
+  font-size: 5vh;
+}
