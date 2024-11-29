@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { formToJSON } from "axios";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -45,3 +45,12 @@ export const getUserProfile = async (userId) => {
       throw error.response?.data?.message || "Failed to fetch user profile";
     }
   };
+
+export const updateUserProfile = async (userId, formData) => {
+  try {
+    const response = await API.put(`/profile/${userId}`, formData);
+      return response.data;
+  } catch (error) {
+    throw error.response?.data?.message || "Failed to update user profile";
+  }
+}
